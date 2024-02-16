@@ -1,8 +1,8 @@
 ## INTERFACING DIGITAL INPUT SENSOR WITH ARDUINO PUSH BUTTON
-## DATE :
-## NAME :																			             
-## ROLLNUMBER :
-## DEPARTMENT 
+## DATE : 16-02-2024
+## NAME : HARINI B.																			             
+## ROLLNUMBER : 212221230035
+## DEPARTMENT : AI&DS
 
 
 ## AIM:
@@ -34,52 +34,60 @@ Clock Speed	16 MHz
 ## PIN DIAGRAM FOR ATMEGA 328
  
 ![image](https://user-images.githubusercontent.com/36288975/163530394-115baee4-7ed1-49fe-9cce-d7b625e11e85.png)
-
-FIGURE-01
+### FIGURE-01
 ![image](https://user-images.githubusercontent.com/36288975/163530431-4d390e98-0942-42d8-95b8-f57d348e6ad8.png)
-
-FIGURE-02
+### FIGURE-02
 ## PROCEDURE 
- Open tinker cad account 
+### Open tinker cad account 
 1.	Select Arduino uno , bread board , digital input and digital output 
 2.	Connect the circuit as given in the figure 
 3.	Develop the program and compile it for any errors 
-4.	 .Execute the program 
+4.	Execute the program 
 5.	Check the simulation 
-
-
 
 ## CIRCUIT DIAGRAM 
 
-
 ![image](https://user-images.githubusercontent.com/36288975/163530437-87a0afbd-b3c9-44ad-b907-5de63486fb9d.png)
-
-
-
-FIGURE -03
-
-
-
+### FIGURE -03
+![image](https://github.com/HariniBaskar/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/93427253/9e751382-257e-45d4-a4c4-407eeef81f61)
 
 ## PROGRAM 
- 
- 
+```
+int led=3;
+int pushbutton=4;
 
+void setup()
+{
+  pinMode(led,OUTPUT);
+  pinMode(pushbutton,INPUT);
+}
 
-
-
-
-
-
-
-
- 
- 
- 
-
-
+void loop()
+{
+  int pb;
+  pb=digitalRead(pushbutton);
+  if (pb==LOW)
+  {
+    digitalWrite(led,HIGH);
+    delay(500);
+    digitalWrite(led,LOW);
+    delay(500);
+  }
+  else
+  {
+    digitalWrite(led,LOW);
+    delay(500);
+  }    
+}
+```
 
 ## OUTPUT OF SIMULATION :
 
-[My image](username.github.com/repository/img/image.jpg)
+## ON
+![image](https://github.com/HariniBaskar/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/93427253/58d4f1e8-2548-4f75-88bb-2de2f735f232)
 
+## OFF
+![image](https://github.com/HariniBaskar/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/93427253/a57133ae-a350-47e9-821f-1739cbec2777)
+
+## RESULT:
+Thus the simulation output is completed in tinker cad successfully.
